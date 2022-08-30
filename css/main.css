@@ -393,6 +393,7 @@ p{
 }
 
 .footer-nav li a{
+    padding: 0.5rem 0;
     text-transform: uppercase;
     text-decoration: underline;
     color: var(--light);
