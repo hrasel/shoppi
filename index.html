@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppi | Home</title>
+
+    <!-- ********** LINKING CSS AND JAVASCRIPT FILES ********** -->
+    <!-- Bootstrap 5.2 StyleSheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Font Awesome Stylesheet -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Linking Bootstrap JavaScript -->
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Linking Custom JavaScript -->
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <!-- START HEADER SECTION >> -->
+    <header>
+        <nav class="navbar bg-cream" id="top-navbar">
+            <div class="container">
+                <!-- LOGO in Nav Bar -->
+                <a href="index.html" class="navbar-brand p-0 m-0">
+                    <img class="logo img-fluid rounded" src="img/iconica-logo.png" alt="Iconica Logo">
+                </a>
+                <!-- nav-contents wrapped all nav elements without LOGO -->
+                <div class="d-flex justify-content-end ps-3" id="nav-contents">
+                    <!-- Search Bar Toggler -->
+                    <button class="navbar-toggler navbar-search d-flex align-items-center rounded order-lg-2 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#search-expand" aria-controls="search-expand">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="input-search border-0 d-none d-md-block" placeholder="Search">
+                    </button>
+                    <!-- START Search Bar Expand >> -->
+                    <div class="offcanvas offcanvas-top bg-white" tabindex="-1" id="search-expand" aria-labelledby="search-expand-label">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-2 d-none d-md-block">
+                                    <!-- LOGO in Search Bar -->
+                                    <a href="index.html" class="navbar-brand">
+                                        <img class="logo img-fluid rounded" src="img/iconica-logo.png" alt="Iconica Logo">
+                                    </a>
+                                </div>
+                                <div class="col-10 col-md-8">
+                                    <form class="form-search d-flex rounded" id="search-form-expand" role="search">
+                                        <button class="icon-box-md border-0" type="submit">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                        <input type="text" class="input-search border-0" placeholder="Search" autofocus>
+                                    </form>
+                                    <div id="search-history" class="pt-4">
+                                        <h6 class="mb-2 text-muted">Popular Search Items</h6>
+                                        <ul class="list-unstyled" id="search-history-list">
+                                            <li class="nav-item mb-2">
+                                                <a href="#" class="nav-link fs-5 d-inline-block py-1">Cotton Dress</a>
+                                            </li>
+                                            <li class="nav-item mb-2">
+                                                <a href="#" class="nav-link fs-5 d-inline-block py-1">Shifon Dress</a>
+                                            </li>
+                                            <li class="nav-item mb-2">
+                                                <a href="#" class="nav-link fs-5 d-inline-block py-1">Linen Dress</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-2 d-flex justify-content-end ps-0">
+                                    <button type="button" class="btn-close icon-box-md p-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Search Bar Expand << -->
+                    <!-- Login, Wishlist, Cart Icon -->
+                    <ul class="list-unstyled mb-0 d-flex order-lg-3" id="nav-icon-links">
+                        <li class="nav-item ms-2 d-none d-md-block">
+                            <a href="#" class="nav-link icon-box-md rounded">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-2 d-none d-md-block">
+                            <a href="#" class="nav-link icon-box-md rounded">
+                                <i class="fa-solid fa-heart"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item ms-2">
+                            <!-- Cart Toggle -->
+                            <button class="navbar-toggler icon-box-md d-md-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#quick-cart" aria-controls="quick-cart" id="btn-cart">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </button>
+                            <!-- START Quick Cart >> -->
+                            <div class="offcanvas offcanvas-end bg-white" tabindex="-1" id="quick-cart" aria-labelledby="quick-cart-label">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title text-uppercase" id="mobile-tablet-menu-label">Shopping Bag</h5>
+                                    <button type="button" class="btn-close icon-box-md p-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    
+                                </div>
+                            </div>
+                            <!-- END Quick Cart << -->
+                        </li>
+                    </ul>
+                    <!-- START Dextop Menu Only >> -->
+                    <ul class="navbar-nav d-none d-lg-flex flex-row align-items-lg-center mx-auto" id="dextop-menu">
+                        <li class="nav-item me-2">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="shop.html" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="news.html" class="nav-link">News</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="about.html" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item me-2">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- END Dextop Menu Only << -->
+                    <!-- START Navbar Menu Toggler and Menu (Only Visible for Mobile and Tablet) >> -->
+                    <button class="navbar-toggler icon-box d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-tablet-menu" aria-controls="mobile-tablet-menu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end bg-cream d-lg-none" tabindex="-1" id="mobile-tablet-menu" aria-labelledby="mobile-tablet-menu-label">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title text-uppercase" id="mobile-tablet-menu-label">iconica menu</h5>
+                            <button type="button" class="btn-close icon-box p-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shop.html">Shop</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="news.html">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Category
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Summer</a></li>
+                                        <li><a class="dropdown-item" href="#">Winter</a></li>
+                                        <li><a class="dropdown-item" href="#">All Time</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item d-block d-md-none mt-3">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa-solid fa-user me-2"></i>
+                                        Account
+                                    </a>
+                                </li>
+                                <li class="nav-item d-block d-md-none">
+                                    <a href="#" class="nav-link">
+                                        <i class="fa-solid fa-heart me-2"></i>
+                                        Favourite
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END Navbar Menu Toggler and Menu << -->
+                </div>
+            </div><!--/.contaner-->
+        </nav>
+    </header>
+    <!-- END HEADER SECTION << -->
+
+    <!-- START HERO SECTION >> -->
+    <section class="overflow-hidden mb-5" id="hero-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center order-1 order-md-0">
+                    <div class="hero-text py-4">
+                        <h2 class="mb-4 text-uppercase">New Black SunGlass</h2>
+                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ipsa vero eaque animi culpa ullam cumque cupiditate ex sunt quisquam!</p>
+                        <a href="#" class="btn btn-lg text-uppercase btn-primary">Buy Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hero-media position-relative">
+                        <img src="img/sunglass (1).jpg" alt="Sunglass 1" class="img-fluid">
+                        <div class="img-frame position-absolute"></div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END HERO SECTION << -->
+
+    <!-- START FEATURE SECTION >> -->
+    <section class="section py-5" id="home-features">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="section-title-heading text-capitalize">Our Features</h2>
+            </div>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
+                        <div class="icon-box fs-3">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+                        <h5 class="mb-1 text-capitalize">Home Delivery</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
+                        <div class="icon-box fs-3">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h5 class="mb-1 text-capitalize">24 / 7 Support</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
+                        <div class="icon-box fs-3">
+                            <i class="fa-solid fa-money-bill"></i>
+                        </div>
+                        <h5 class="mb-1 text-capitalize">Decent Price</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
+                        <div class="icon-box fs-3">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <h5 class="mb-1 text-capitalize">Cash on Delivery</h5 class="mb-1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END FEATURE SECTION << -->
+
+    <!-- START CATEGORY SECTION >> -->
+    <section class="section py-5" id="home-category">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="section-title-heading text-capitalize">Category</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="p-2 bg-cream rounded">
+                        <a href="#" class="d-block text-decoration-none">
+                            <div class="position-relative">
+                                <img src="img/sunglass (5).jpg" alt="Category Image 1" class="img-fluid rounded">
+                                <div class="overlay p-3 rounded">
+                                    <h4 class="mb-3 text-white">Round Shape</h4>
+                                    <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <div class="p-2 bg-cream rounded">
+                        <a href="#" class="d-block text-decoration-none">
+                            <div class="position-relative">
+                                <img src="img/sunglass (4).jpg" alt="Category Image 2" class="img-fluid rounded">
+                                <div class="overlay p-3 rounded">
+                                    <h4 class="mb-3 text-white">Men</h4>
+                                    <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 mb-3">
+                    <div class="p-2 bg-cream rounded">
+                        <a href="#" class="d-block text-decoration-none">
+                            <div class="position-relative">
+                                <img src="img/sunglass (3).jpg" alt="Category Image 3" class="img-fluid rounded">
+                                <div class="overlay p-3 rounded">
+                                    <h4 class="mb-3 text-white">Black</h4>
+                                    <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 mb-3">
+                    <div class="p-2 bg-cream rounded">
+                        <a href="#" class="d-block text-decoration-none">
+                            <div class="position-relative">
+                                <img src="img/sunglass (2).jpg" alt="Category Image 4" class="img-fluid rounded">
+                                <div class="overlay p-3 rounded">
+                                    <h4 class="mb-3 text-white">Women</h4>
+                                    <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 mb-3">
+                    <div class="p-2 bg-cream rounded">
+                        <a href="#" class="d-block text-decoration-none">
+                            <div class="position-relative">
+                                <img src="img/sunglass (1).jpg" alt="Category Image 5" class="img-fluid rounded">
+                                <div class="overlay p-3 rounded">
+                                    <h4 class="mb-3 text-white">Kids</h4>
+                                    <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END CATEGORY SECTION << -->
+
+    <!-- START PRODUCTS (LATEST) SECTION >> -->
+    <section class="section py-5" id="home-products-latest">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2 class="section-title-heading text-capitalize">Latest products</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card box-shadow-lg-light rounded border-0">
+                            <img src="img/sunglass (3).jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                            <div class="card-body">
+                                <h4 class="mb-3 text-capitalize">Product Name</h4>
+                                <div class="d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <span class="sale-price text-dark me-2">$2100</span>
+                                        <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                    </div>
+                                    <span class="fst-italic">
+                                        <a href="#category" class="text-decoration-none">Category</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card box-shadow-lg-light rounded border-0">
+                            <img src="img/sunglass (4).jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                            <div class="card-body">
+                                <h4 class="mb-3 text-capitalize">Product Name</h4>
+                                <div class="d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <span class="sale-price text-dark me-2">$2100</span>
+                                        <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                    </div>
+                                    <span class="fst-italic">
+                                        <a href="#category" class="text-decoration-none">Category</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card box-shadow-lg-light rounded border-0">
+                            <img src="img/sunglass (5).jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                            <div class="card-body">
+                                <h4 class="mb-3 text-capitalize">Product Name</h4>
+                                <div class="d-flex justify-content-between">
+                                    <div class="product-price">
+                                        <span class="sale-price text-dark me-2">$2100</span>
+                                        <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                    </div>
+                                    <span class="fst-italic">
+                                        <a href="#category" class="text-decoration-none">Category</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END PRODUCTS (LATEST) SECTION << -->
+
+    <!-- START PRODUCT (FEATURE) SECTION >> -->
+    <section class="section py-5" id="home-products-feature">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2 class="section-title-heading">Exclusive Product</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-2">
+                    <div class="position-relative">
+                        <div class="img-frame-half-x position-absolute start-0 rounded"></div>
+                        <div class="p-4 pe-0">
+                            <a href="#" class="text-decoration-none">
+                                <img src="img/sunglass (1).jpg" alt="Featured Product" class="img-fluid rounded">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="d-block p-4">
+                        <h3 class="mb-4 text-capitalize">
+                            <a href="#" class="text-decoration-none">
+                                Exclusive Product For You
+                            </a>
+                        </h3>
+                        <h6 class="text-uppercase mb-3">Product Code</h6>
+                        <p class="mb-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quas necessitatibus consequuntur vitae expedita inventore.
+                        </p>
+                        <h5 class="mb-4 d-flex">
+                            <span class="sale-price me-2">$2100</span>
+                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                        </h5>
+                        <a href="#" class="btn btn-lg btn-primary text-uppercase">Buy Now</a>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END PRODUCT (FEATURE) SECTION << -->
+
+    <!-- START TESTIMONIAL SECTION >> -->
+    <section class="section py-5" id="home-testimonial">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2 class="section-title-heading">Our Client Say</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-2 d-flex align-items-center fst-italic">
+                    <div class="d-flex flex-column p-4 p-md-0">
+                        <div class="icon-box fs-3 text-light">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <blockquote>
+                            <p class="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eius earum perferendis nesciunt expedita. Odio voluptate illum sequi quibusdam obcaecati explicabo quo tempore rerum quam voluptatibus quas, non consectetur officiis!</p>
+                        </blockquote>
+                        <div class="d-block text-right fs-5 pt-2 border-top">
+                            <h5 class="mb-0">Salman Noor</h5>
+                            <h6 class="text-muted">Actor</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="position-relative">
+                        <div class="img-frame-half-x position-absolute end-0 rounded"></div>
+                        <div class="p-4 ps-0">
+                            <img src="img/client.jpg" alt="Featured Product" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END TESTIMONIAL SECTION << -->
+
+    <!-- START NEWS SECTION >> -->
+    <section class="section py-5" id="home-news">
+        <div class="container">
+            <div class="section-title mb-5">
+                <h2 class="section-title-heading">Latest News</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="position-relative">
+                        <div class="img-frame-half-y position-absolute start-0 rounded"></div>
+                        <div class="p-4">
+                            <a href="#" class="text-decoration-none">
+                                <img src="img/blog.jpg" alt="Featured Product" class="img-fluid rounded">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="d-block p-4">
+                        <h3 class="mb-4 text-capitalize">
+                            <a href="#" class="hover-underline text-decoration-none">
+                                Exclusive Offer For All
+                            </a>
+                        </h3>
+                        <p class="mb-4">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quas necessitatibus consequuntur vitae expedita inventore.
+                        </p>
+                        <a href="#" class="btn btn-md btn-dark text-uppercase">Learn More</a>
+                    </div>
+                </div>
+           </div><!--/.row-->
+        </div><!--/.container-fluid-->
+    </section>
+    <!-- END NEWS SECTION << -->
+
+    <!-- START FOOTER SECTION >> -->
+    <footer class="footer bg-dark pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="bg-white rounded p-4 text-center subscribe-section">
+                        <h5 class="text-uppercase">Join our Newsletter</h5>
+                        <p>Recive our latest products by Email</p>
+                        <form class="d-flex flex-column flex-md-row justify-content-center subscribe-form">
+                            <label for="subscribe-email" class="sr-only">Your Email Address</label>
+                            <input type="email" placeholder="Your email address" id="subscribe-email" class="rounded me-md-2 mb-2 mb-md-0">
+                            <button type="submit" class="btn btn-md btn-primary text-uppercase">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div><!--/.row-->
+
+            <div class="row mt-5">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="footer-widget">
+                        <!-- LOGO in Footer -->
+                        <a href="index.html" class="navbar-brand p-0 d-block mb-3">
+                            <img class="logo img-fluid rounded" src="img/iconica-logo.png" alt="Iconica Logo">
+                        </a>
+                        <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ut, cum molestiae quae praesentium magnam odit dicta qui sint aspernatur!</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-2">
+                    <div class="footer-widget">
+                        <h5 class="mb-3 text-white text-uppercase">Links</h5>
+                        <ul class="list-unstyled d-flex flex-row flex-md-column footer-nav">
+                            <li class="mb-3">
+                                <a href="#" class="nav-link">Shop</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="nav-link">News</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="nav-link">About</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="nav-link">Policy</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="nav-link">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h5 class="text-uppercase text-white mb-3">Contact</h5>
+                        <address class="d-flex flex-column">
+                            <strong class="mb-1">Hotline:</strong>
+                            <a href="tel:+8801566022533" class="mb-3 text-decoration-none text-light">
+                                <i class="fa-solid fa-phone me-2"></i>
+                                +8801566022533
+                            </a>
+                            <strong class="mb-1">Email:</strong>
+                            <a href="mailto:raselnobogram@gmail.com" class="text-break mb-3 text-decoration-none text-light">
+                                <i class="fa-solid fa-at me-2"></i>
+                                raselnobogram@gmail.com
+                            </a>
+                        </address>
+                        <strong>Conect With Us:</strong>
+                        <ul class="list-unstyled d-flex pt-2">
+                            <li class="me-3">
+                                <a href="#" class="icon-box-sm rounded bg-light text-dark text-decoration-none" title="Facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+
+                            <li class="me-3">
+                                <a href="#" class="icon-box-sm rounded bg-light text-dark text-decoration-none" title="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+
+                            <li class="me-3">
+                                <a href="#" class="icon-box-sm rounded bg-light text-dark text-decoration-none" title="Youtube">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-3">
+                    <div class="footer-widget">
+                        <h5 class="text-uppercase text-white mb-3">we accept</h5>
+                        <div class="d-flex flex-wrap payment-support">
+                            <img src="img/bkash-logo.png" alt="Bkash Logo">
+                            <img src="img/nagad-logo.png" alt="Nagad Logo">
+                            <img src="img/rocket-logo.png" alt="Rocket Logo">
+                            <img src="img/upay-logo.png" alt="Upay Logo">
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->
+
+            <div class="row">
+                <div class="col copyright py-2 d-flex flex-column flex-md-row justify-content-between">
+                    <small class="mb-2 mb-md-0">&copy;Copyright 2022. All right Reserved.</small>
+                    <small class="mb-0">Developed by <a href="#">Hoaasin M. Rasel</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER SECTION << -->    
+    
+</body>
+</html>
