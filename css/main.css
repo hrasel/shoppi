@@ -1,0 +1,418 @@
+/*
+Theme Name: Shoppi
+Theme URI: 
+Author: Hossain M. Rasel
+Author URI: 
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Shoppi
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* IMPORT FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700;8..144,900&display=swap');
+
+:root{
+    --cream: #fffcb8;
+    --dark-900: #333;
+    --dark-700: #777;
+    --dark-500: #aaa;
+    --grey: #ccc;
+    --light: #eee;
+    --white: #fff;
+
+    --fs-base-sm: 12px;
+    --fs-base-md: 14px;
+    --fs-base-lg: 16px;
+}
+
+html{
+    font-size: var(--fs-base-sm);
+    color: var(--dark-900);
+}
+
+body{
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.container-fluid{
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px){
+    html{
+        font-size: var(--fs-base-md);
+    }
+}
+
+@media (min-width: 992px){
+    html{
+        font-size: var(--fs-base-lg);
+    }
+}
+
+/* 
+ * TYPROGRAPHY (Base 16px, Scale 1.250) >>
+ **************************************************
+ */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5{
+    font-family: 'Roboto Serif', serif;
+    line-height: 1.5;
+    color: var(--dark-900);
+ }
+
+
+h1{
+    font-size: 3.52rem;
+    font-weight: 900;
+}
+
+h2{
+    font-size: 2.44rem;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.95rem;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 1.56rem;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+h6{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--dark-900);
+}
+
+p{
+    font-size: 1.2rem;
+    color: var(--dark-700);
+    line-height: 1.75;
+}
+
+
+/* 
+ * NAVBAR (MAIN) >>
+ **************************************************
+ */
+.logo{
+    width: 7rem;
+}
+
+#nav-contents{
+    width: calc(100% - 7rem);
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus,
+.btn-close:hover,
+.btn-close:focus{
+    outline: none;
+    border: none;
+    background-color: var(--light);
+    box-shadow: none;
+}
+
+#mobile-tablet-menu{
+    width: 320px;
+    padding: 1.3rem;
+}
+
+#mobile-tablet-menu .nav-link{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+@media (min-width: 992px){
+   
+    #dextop-menu .nav-link{
+        position: relative;
+        font-size: 1rem;
+        padding: 0.6875rem;
+        font-weight: 500;
+    }
+
+    #dextop-menu .nav-link::after{
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -7px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 2px;
+        background-color: var(--dark-900);
+        transform: rotateY(90deg);
+        transition: 0.3s ease;
+    }
+    #dextop-menu .nav-link:hover::after{
+        transform: rotateY(0);
+    }
+}
+
+#search-expand{
+    max-width: 100%!important;
+    min-height: 300px;
+    background: var(--cream); 
+    padding: 1rem 0;
+    z-index: 1045;
+}
+
+.navbar-search{
+    background-color: none;
+}
+
+@media(min-width: 768px){
+
+    .navbar-search{
+        background-color: var(--light);
+    }
+
+}
+
+.form-search{
+    height: 3rem;
+    overflow: hidden;
+}
+
+.form-search,
+#search-history{
+    margin: 0 auto;
+}
+
+.input-search{
+    width: 10rem;
+    background-color: var(--light);
+    padding-left: 1rem;
+}
+
+#search-expand .input-search{
+    width: 100%;
+}
+
+#search-form-expand, #search-history{
+    max-width: 40rem;
+}
+
+#nav-icon-links li a:hover,
+#nav-icon-links li a:active,
+#nav-icon-links li a:focus,
+#btn-cart:hover i,
+#btn-cart:active i,
+#btn-cart:focus i,
+.input-search:focus{
+    color: var(--dark-900);
+    outline: none;
+}
+
+#search-history-list li a:hover{
+    color: var(--dark-700);
+}
+
+#nav-icon-links i{
+    font-size: 1.3rem;
+}
+
+#quick-cart{
+    z-index: 1041;
+}
+
+.offcanvas-backdrop.show{
+    opacity: 0.2;
+}
+
+/* 
+ * REPEATED CLASSES >>
+ **************************************************
+ */
+
+ .section-title{
+    width: fit-content;
+    margin: 0 auto;
+    border-bottom: 5px solid var(--cream);
+ }
+
+ .section-title-heading{
+    border-bottom: 2px solid var(--cream);
+ }
+
+ .icon-box-sm, .icon-box-md{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #777;
+}
+
+.icon-box-md{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.17rem;
+}
+
+.icon-box-sm{
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1rem;
+}
+
+.bg-cream{
+    background-color: var(--cream);
+}
+
+.btn-sm{
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn-md{
+    font-size: 0.9rem;
+    padding: 0.7rem 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn-lg{
+    font-size: 1.1rem;
+    padding: 0.9rem 1.9rem;
+    font-weight: 500;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--light);
+}
+
+.img-frame-half-x{
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background: var(--cream);
+}
+
+.img-frame-half-y{
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    background: var(--cream);
+}
+
+.box-shadow-lg-light{
+    box-shadow: 0px 0px 17px #f1f1f1;
+}
+
+/* 
+ * HERO >>
+ **************************************************
+ */
+.hero-home{
+    max-height: 100vh;
+    border-bottom: 2px solid var(--cream);
+}
+
+.hero-media, .hero-text{
+    max-width: 500px;
+}
+
+.img-frame{
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    border: 1px solid var(--cream);
+}
+
+/* 
+ * FEATURE >>
+ **************************************************
+ */
+
+ .feature-box i{
+    color: #ddd;
+ }
+
+
+/* 
+ * FOOTER >>
+ **************************************************
+ */
+
+ .footer{
+    color: var(--light);
+ }
+
+ .subscribe-section{
+    max-width: 37rem;
+    margin: 0 auto;
+ }
+
+.subscribe-form input{
+    min-width: 18rem;
+    height: 3rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--dark-500);
+}
+
+.footer-widget{
+    padding: 1rem;
+}
+
+.footer-nav li a{
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: var(--light);
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:focus,
+.footer-nav li a:active{
+    color: var(--dark-500);
+}
+
+.payment-support img{
+    max-width: 5rem;
+    height: auto;
+    margin: 0 1rem 1rem 0;
+    padding: 0.5rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.copyright{
+    border-top: 1px solid var(--dark-500);
+}
