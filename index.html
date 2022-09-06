@@ -16,15 +16,18 @@
     <!-- Font Awesome Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
+    <!-- Swiper JS Stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
 </head>
 <body>
     <!-- START HEADER SECTION >> -->
     <header>
-        <nav class="navbar bg-cream" id="top-navbar">
+        <nav class="navbar box-shadow-lg-light" id="top-navbar">
             <div class="container">
                 <!-- LOGO in Nav Bar -->
-                <a href="index.html" class="navbar-brand p-0 m-0">
-                    <img class="logo img-fluid rounded" src="img/iconica-logo.png" alt="Iconica Logo">
+                <a href="index.html" class="logo p-0 m-0">
+                    Shopi
                 </a>
                 <!-- nav-contents wrapped all nav elements without LOGO -->
                 <div class="d-flex justify-content-end ps-3" id="nav-contents">
@@ -39,8 +42,8 @@
                             <div class="row">
                                 <div class="col-md-2 d-none d-md-block">
                                     <!-- LOGO in Search Bar -->
-                                    <a href="index.html" class="navbar-brand">
-                                        <img class="logo img-fluid rounded" src="img/iconica-logo.png" alt="Iconica Logo">
+                                    <a href="index.html" class="logo p-0 m-0">
+                                        Shopi
                                     </a>
                                 </div>
                                 <div class="col-10 col-md-8">
@@ -51,7 +54,7 @@
                                         <input type="text" class="input-search border-0" placeholder="Search" autofocus>
                                     </form>
                                     <div id="search-history" class="pt-4">
-                                        <h6 class="mb-2 text-muted">Popular Search Items</h6>
+                                        <p class="mb-2 text-muted">Popular Search Items</p>
                                         <ul class="list-unstyled" id="search-history-list">
                                             <li class="nav-item mb-2">
                                                 <a href="#" class="nav-link fs-5 d-inline-block py-1">Cotton Dress</a>
@@ -75,18 +78,18 @@
                     <!-- Login, Wishlist, Cart Icon -->
                     <ul class="list-unstyled mb-0 d-flex order-lg-3" id="nav-icon-links">
                         <li class="nav-item ms-2 d-none d-md-block">
-                            <a href="#" class="nav-link icon-box-md rounded">
+                            <a href="#" class="nav-icon-link icon-box-md rounded">
                                 <i class="fa-solid fa-user"></i>
                             </a>
                         </li>
                         <li class="nav-item ms-2 d-none d-md-block">
-                            <a href="#" class="nav-link icon-box-md rounded">
+                            <a href="#" class="nav-icon-link icon-box-md rounded">
                                 <i class="fa-solid fa-heart"></i>
                             </a>
                         </li>
                         <li class="nav-item ms-2">
                             <!-- Cart Toggle -->
-                            <button class="navbar-toggler icon-box-md d-md-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#quick-cart" aria-controls="quick-cart" id="btn-cart">
+                            <button class="navbar-toggler nav-icon-link icon-box-md d-md-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#quick-cart" aria-controls="quick-cart" id="btn-cart">
                                 <i class="fa-solid fa-bag-shopping"></i>
                             </button>
                             <!-- START Quick Cart >> -->
@@ -96,7 +99,36 @@
                                     <button type="button" class="btn-close icon-box-md p-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                 </div>
                                 <div class="offcanvas-body">
-                                    
+                                    <ul class="list-unstyled mb-3" id="quick-cart-product-list">
+                                        <li class="d-flex mb-3">
+                                            <a href="#" class="d-block">
+                                                <img src="img/watch-2.jpg" alt="Watch" class="img-thumb rounded me-3">
+                                            </a>
+                                            <div>
+                                                <a href="#" class="link-accent d-block mb-1">Product Name</a>
+                                                <span class="quantity">1</span>
+                                                <span>x</span>
+                                                <span class="price">$2100</span>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex mb-3">
+                                            <a href="#" class="d-block">
+                                                <img src="img/watch-3.jpg" alt="Watch" class="img-thumb rounded me-3">
+                                            </a>
+                                            <div>
+                                                <a href="#" class="link-accent d-block mb-1">Product Name</a>
+                                                <span class="quantity">2</span>
+                                                <span>x</span>
+                                                <span class="price">$2100</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex justify-content-between align-items-center py-2">
+                                        <span class="text-muted">Subtotal:</span>
+                                        <span class="h3">$6300</span>
+                                    </div>
+                                    <a href="#" class="button button-accent d-block mb-3">Checkout</a>
+                                    <a href="#" class="button button-alter d-block">View Cart</a>
                                 </div>
                             </div>
                             <!-- END Quick Cart << -->
@@ -125,10 +157,10 @@
                     <button class="navbar-toggler icon-box d-lg-none ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobile-tablet-menu" aria-controls="mobile-tablet-menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="offcanvas offcanvas-end bg-cream d-lg-none" tabindex="-1" id="mobile-tablet-menu" aria-labelledby="mobile-tablet-menu-label">
+                    <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobile-tablet-menu" aria-labelledby="mobile-tablet-menu-label">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title text-uppercase" id="mobile-tablet-menu-label">iconica menu</h5>
-                            <button type="button" class="btn-close icon-box p-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <h5 class="h2 text-uppercase" id="mobile-tablet-menu-label">iconica menu</h5>
+                            <button type="button" class="btn-close icon-box-md p-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -174,30 +206,85 @@
                     </div>
                     <!-- END Navbar Menu Toggler and Menu << -->
                 </div>
-            </div><!--/.contaner-->
+            </div><!-- end contaner-->
         </nav>
     </header>
     <!-- END HEADER SECTION << -->
 
     <!-- START HERO SECTION >> -->
     <section class="overflow-hidden mb-5" id="hero-home">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d-flex align-items-center order-1 order-md-0">
-                    <div class="hero-text py-4">
-                        <h2 class="mb-4 text-uppercase">New Black SunGlass</h2>
-                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ipsa vero eaque animi culpa ullam cumque cupiditate ex sunt quisquam!</p>
-                        <a href="#" class="btn btn-lg text-uppercase btn-primary">Buy Now</a>
-                    </div>
+        <!-- Slider main container -->
+        <div class="swiper pb-4" id="slider-home-hero">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 d-flex align-items-center order-1 order-md-0">
+                                <div class="hero-text py-4">
+                                    <h2 class="mb-4 text-uppercase headline-1">New <span class="text-accent">Rolex</span> Watch</h2>
+                                    <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ipsa vero eaque animi culpa ullam cumque cupiditate ex sunt quisquam!</p>
+                                    <a href="#" class="button button-accent text-uppercase box-shadow-lg-light">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero-media position-relative">
+                                    <img src="img/catergory-6.jpg" alt="Watch 1" class="img-fluid">
+                                    <div class="img-border-inner position-absolute"></div>
+                                </div>
+                            </div>
+                        </div> <!-- end row -->
+                    </div> <!-- end container -->
                 </div>
-                <div class="col-md-6">
-                    <div class="hero-media position-relative">
-                        <img src="img/sunglass (1).jpg" alt="Sunglass 1" class="img-fluid">
-                        <div class="img-frame position-absolute"></div>
-                    </div>
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 d-flex align-items-center order-1 order-md-0">
+                                <div class="hero-text py-4">
+                                    <h2 class="mb-4 text-uppercase headline-1">New <span class="text-accent">Rado</span> Watch</h2>
+                                    <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ipsa vero eaque animi culpa ullam cumque cupiditate ex sunt quisquam!</p>
+                                    <a href="#" class="button button-accent text-uppercase box-shadow-lg-light">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero-media position-relative">
+                                    <img src="img/catergory-4.jpg" alt="Watch 1" class="img-fluid">
+                                    <div class="img-border-inner position-absolute"></div>
+                                </div>
+                            </div>
+                        </div> <!-- end row -->
+                    </div> <!-- end container -->
                 </div>
-            </div><!--/.row-->
-        </div><!--/.container-fluid-->
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 d-flex align-items-center order-1 order-md-0">
+                                <div class="hero-text py-4">
+                                    <h2 class="mb-4 text-uppercase headline-1">New <span class="text-accent">Rider</span> Watch</h2>
+                                    <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ipsa vero eaque animi culpa ullam cumque cupiditate ex sunt quisquam!</p>
+                                    <a href="#" class="button button-accent text-uppercase box-shadow-lg-light">Buy Now</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="hero-media position-relative">
+                                    <img src="img/catergory-2.jpg" alt="Watch 1" class="img-fluid">
+                                    <div class="img-border-inner position-absolute"></div>
+                                </div>
+                            </div>
+                        </div> <!-- end row -->
+                    </div> <!-- end container -->
+                </div>
+            </div><!-- end swiper-wrapper -->
+        
+            <!-- Slider navigation buttons -->
+            <div class="swiper-button-prev d-none d-md-block"></div>
+            <div class="swiper-button-next d-none d-md-block"></div>
+        
+            <!-- Slider scrollbar -->
+            <div class="swiper-scrollbar custom-scrollbar"></div>
+        
+        </div><!-- end swiper -->
     </section>
     <!-- END HERO SECTION << -->
 
@@ -205,10 +292,10 @@
     <section class="section py-5" id="home-features">
         <div class="container">
             <div class="section-title text-center mb-5">
-                <h2 class="section-title-heading text-capitalize">Our Features</h2>
+                <h2 class="headline-2">Our Features</h2>
             </div>
             <div class="row">
-                <div class="col-6 col-md-3 mb-4">
+                <div class="col-6 col-lg-3 mb-4">
                     <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
                         <div class="icon-box fs-3">
                             <i class="fa-solid fa-house"></i>
@@ -217,7 +304,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 mb-4">
+                <div class="col-6 col-lg-3 mb-4">
                     <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
                         <div class="icon-box fs-3">
                             <i class="fa-solid fa-handshake"></i>
@@ -226,7 +313,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-lg-3">
                     <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
                         <div class="icon-box fs-3">
                             <i class="fa-solid fa-money-bill"></i>
@@ -235,7 +322,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-6 col-lg-3">
                     <div class="d-flex flex-column justify-content-center align-items-center p-1 text-center feature-box">
                         <div class="icon-box fs-3">
                             <i class="fa-solid fa-wallet"></i>
@@ -244,8 +331,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
                 </div>
-            </div><!--/.row-->
-        </div><!--/.container-fluid-->
+            </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
     </section>
     <!-- END FEATURE SECTION << -->
 
@@ -253,16 +340,16 @@
     <section class="section py-5" id="home-category">
         <div class="container">
             <div class="section-title text-center mb-5">
-                <h2 class="section-title-heading text-capitalize">Category</h2>
+                <h2 class="headline-2">Brands</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <div class="p-2 bg-cream rounded">
+                    <div class="rounded category-card">
                         <a href="#" class="d-block text-decoration-none">
                             <div class="position-relative">
-                                <img src="img/sunglass (5).jpg" alt="Category Image 1" class="img-fluid rounded">
+                                <img src="img/catergory-1.jpg" alt="Category Image 1" class="img-fluid rounded">
                                 <div class="overlay p-3 rounded">
-                                    <h4 class="mb-3 text-white">Round Shape</h4>
+                                    <h4 class="mb-3 text-white text-uppercase">Fossil</h4>
                                     <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
                                 </div>
                             </div>
@@ -271,12 +358,12 @@
                 </div>
 
                 <div class="col-md-6 mb-3">
-                    <div class="p-2 bg-cream rounded">
+                    <div class="rounded category-card">
                         <a href="#" class="d-block text-decoration-none">
                             <div class="position-relative">
-                                <img src="img/sunglass (4).jpg" alt="Category Image 2" class="img-fluid rounded">
+                                <img src="img/catergory-2.jpg" alt="Category Image 2" class="img-fluid rounded">
                                 <div class="overlay p-3 rounded">
-                                    <h4 class="mb-3 text-white">Men</h4>
+                                    <h4 class="mb-3 text-white text-uppercase">Rider</h4>
                                     <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
                                 </div>
                             </div>
@@ -284,13 +371,13 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4 mb-3">
-                    <div class="p-2 bg-cream rounded">
+                <div class="col-sm-6 col-lg-4 mb-3">
+                    <div class="rounded category-card">
                         <a href="#" class="d-block text-decoration-none">
                             <div class="position-relative">
-                                <img src="img/sunglass (3).jpg" alt="Category Image 3" class="img-fluid rounded">
+                                <img src="img/catergory-3.jpg" alt="Category Image 3" class="img-fluid rounded">
                                 <div class="overlay p-3 rounded">
-                                    <h4 class="mb-3 text-white">Black</h4>
+                                    <h4 class="mb-3 text-white text-uppercase">Tissot</h4>
                                     <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
                                 </div>
                             </div>
@@ -298,13 +385,13 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4 mb-3">
-                    <div class="p-2 bg-cream rounded">
+                <div class="col-sm-6 col-lg-4 mb-3">
+                    <div class="rounded category-card">
                         <a href="#" class="d-block text-decoration-none">
                             <div class="position-relative">
-                                <img src="img/sunglass (2).jpg" alt="Category Image 4" class="img-fluid rounded">
+                                <img src="img/catergory-4.jpg" alt="Category Image 4" class="img-fluid rounded">
                                 <div class="overlay p-3 rounded">
-                                    <h4 class="mb-3 text-white">Women</h4>
+                                    <h4 class="mb-3 text-white text-uppercase">Rado</h4>
                                     <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
                                 </div>
                             </div>
@@ -312,21 +399,21 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-4 mb-3">
-                    <div class="p-2 bg-cream rounded">
+                <div class="col-sm-6 col-lg-4 mb-3">
+                    <div class="rounded category-card">
                         <a href="#" class="d-block text-decoration-none">
                             <div class="position-relative">
-                                <img src="img/sunglass (1).jpg" alt="Category Image 5" class="img-fluid rounded">
+                                <img src="img/catergory-5.jpg" alt="Category Image 5" class="img-fluid rounded">
                                 <div class="overlay p-3 rounded">
-                                    <h4 class="mb-3 text-white">Kids</h4>
+                                    <h4 class="mb-3 text-white text-uppercase">Rolex</h4>
                                     <a href="#" class="btn btn-md btn-light text-uppercase">Shop</a>
                                 </div>
                             </div>
                         </a>
                     </div>
                 </div>
-            </div><!--/.row-->
-        </div><!--/.container-fluid-->
+            </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
     </section>
     <!-- END CATEGORY SECTION << -->
 
@@ -334,71 +421,163 @@
     <section class="section py-5" id="home-products-latest">
         <div class="container">
             <div class="section-title mb-5">
-                <h2 class="section-title-heading text-capitalize">Latest products</h2>
+                <h2 class="headline-2">Latest products</h2>
             </div>
-
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card box-shadow-lg-light rounded border-0">
-                            <img src="img/sunglass (3).jpg" alt="Product Image 1" class="img-fluid rounded-top">
-                            <div class="card-body">
-                                <h4 class="mb-3 text-capitalize">Product Name</h4>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <span class="sale-price text-dark me-2">$2100</span>
-                                        <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+        </div>
+        <!-- Products Slider (Swiper Slider) --> 
+        <div id="slider-products" class="swiper container p-3">
+            <div class="swiper-ctrl-buttons container mb-3">
+                <div class="swiper-button-prev d-none d-md-flex me-3"></div>
+                <div class="swiper-button-next d-none d-md-flex"></div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <a href="#" class="d-block">
+                            <div class="card product-card">
+                                <div class="img-change-hover-box">
+                                    <div class="img-display">
+                                        <img src="img/watch-4.jpg" alt="Product Image 1" class="img-fluid rounded-top">
                                     </div>
-                                    <span class="fst-italic">
-                                        <a href="#category" class="text-decoration-none">Category</a>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card box-shadow-lg-light rounded border-0">
-                            <img src="img/sunglass (4).jpg" alt="Product Image 1" class="img-fluid rounded-top">
-                            <div class="card-body">
-                                <h4 class="mb-3 text-capitalize">Product Name</h4>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <span class="sale-price text-dark me-2">$2100</span>
-                                        <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                    <div class="img-change position-absolute">
+                                        <img src="img/watch-4.2.jpg" alt="Product Image 1" class="img-fluid rounded-top">
                                     </div>
-                                    <span class="fst-italic">
-                                        <a href="#category" class="text-decoration-none">Category</a>
-                                    </span>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="card box-shadow-lg-light rounded border-0">
-                            <img src="img/sunglass (5).jpg" alt="Product Image 1" class="img-fluid rounded-top">
-                            <div class="card-body">
-                                <h4 class="mb-3 text-capitalize">Product Name</h4>
-                                <div class="d-flex justify-content-between">
-                                    <div class="product-price">
-                                        <span class="sale-price text-dark me-2">$2100</span>
-                                        <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+    
+                                <div class="card-body">
+                                    <h4 class="link-accent">Product Name</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="product-price">
+                                            <span class="sale-price text-dark me-2">$2100</span>
+                                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                        </div>
+                                        <span class="fst-italic">
+                                            <a href="#category" class="link-simple">Category</a>
+                                        </span>
                                     </div>
-                                    <span class="fst-italic">
-                                        <a href="#category" class="text-decoration-none">Category</a>
-                                    </span>
                                 </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div><!--/.row-->
-        </div><!--/.container-fluid-->
+                            </div><!-- end product-card -->
+                        </a>
+                </div><!-- end swiper slide -->
+                <div class="swiper-slide">
+                    <div class="mb-3">
+                        <a href="#" class="d-block">
+                            <div class="card product-card">
+                                <div class="img-change-hover-box">
+                                    <div class="img-display">
+                                        <img src="img/watch-3.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                    <div class="img-change position-absolute">
+                                        <img src="img/watch-3.2.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                </div>
+    
+                                <div class="card-body">
+                                    <h4 class="link-accent">Product Name</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="product-price">
+                                            <span class="sale-price text-dark me-2">$2100</span>
+                                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                        </div>
+                                        <span class="fst-italic">
+                                            <a href="#category" class="link-simple">Category</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end product-card -->
+                        </a>
+                    </div>
+                </div><!-- end swiper slide -->
+                <div class="swiper-slide">
+                    <div class="mb-3">
+                        <a href="#" class="d-block">
+                            <div class="card product-card">
+                                <div class="img-change-hover-box">
+                                    <div class="img-display">
+                                        <img src="img/watch-2.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                    <div class="img-change position-absolute">
+                                        <img src="img/watch-2.2.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                </div>
+    
+                                <div class="card-body">
+                                    <h4 class="link-accent">Product Name</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="product-price">
+                                            <span class="sale-price text-dark me-2">$2100</span>
+                                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                        </div>
+                                        <span class="fst-italic">
+                                            <a href="#category" class="link-simple">Category</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end product-card -->
+                        </a>
+                    </div>
+                </div><!-- end swiper slide -->
+                <div class="swiper-slide">
+                    <div class="mb-3">
+                        <a href="#" class="d-block">
+                            <div class="card product-card">
+                                <div class="img-change-hover-box">
+                                    <div class="img-display">
+                                        <img src="img/watch-5.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                    <div class="img-change position-absolute">
+                                        <img src="img/watch-5.2.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                </div>
+    
+                                <div class="card-body">
+                                    <h4 class="link-accent">Product Name</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="product-price">
+                                            <span class="sale-price text-dark me-2">$2100</span>
+                                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                        </div>
+                                        <span class="fst-italic">
+                                            <a href="#category" class="link-simple">Category</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end product-card -->
+                        </a>
+                    </div>
+                </div><!-- end swiper slide -->
+                <div class="swiper-slide">
+                    <div class="mb-3">
+                        <a href="#" class="d-block">
+                            <div class="card product-card">
+                                <div class="img-change-hover-box">
+                                    <div class="img-display">
+                                        <img src="img/watch-6.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                    <div class="img-change position-absolute">
+                                        <img src="img/watch-6.2.jpg" alt="Product Image 1" class="img-fluid rounded-top">
+                                    </div>
+                                </div>
+    
+                                <div class="card-body">
+                                    <h4 class="link-accent">Product Name</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="product-price">
+                                            <span class="sale-price text-dark me-2">$2100</span>
+                                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                                        </div>
+                                        <span class="fst-italic">
+                                            <a href="#category" class="link-simple">Category</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div><!-- end product-card -->
+                        </a>
+                    </div>
+                </div><!-- end swiper slide -->
+            </div><!-- end swiper-wrapper -->
+            <div class="swiper-scrollbar custom-scrollbar"></div>
+        
+        </div><!-- end swiper -->
     </section>
     <!-- END PRODUCTS (LATEST) SECTION << -->
 
@@ -406,39 +585,39 @@
     <section class="section py-5" id="home-products-feature">
         <div class="container">
             <div class="section-title mb-5">
-                <h2 class="section-title-heading">Exclusive Product</h2>
+                <h2 class="headline-2">Exclusive</h2>
             </div>
             <div class="row">
-                <div class="col-md-6 mb-2">
+                <div class="col-lg-6 mb-2">
                     <div class="position-relative">
                         <div class="img-frame-half-x position-absolute start-0 rounded"></div>
                         <div class="p-4 pe-0">
-                            <a href="#" class="text-decoration-none">
-                                <img src="img/sunglass (1).jpg" alt="Featured Product" class="img-fluid rounded">
+                            <a href="#" class="link-accent">
+                                <img src="img/exclusive.jpg" alt="Exclusive Watch" class="img-fluid rounded img-hover-left transition-ease-out transition-md">
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-center">
+                <div class="col-lg-6 d-flex align-items-center">
                     <div class="d-block p-4">
-                        <h3 class="mb-4 text-capitalize">
-                            <a href="#" class="text-decoration-none">
-                                Exclusive Product For You
+                        <h3 class="headline-3 text-capitalize">
+                            <a href="#" class="link-accent">
+                                Rado Exclusive Watch
                             </a>
                         </h3>
-                        <h6 class="text-uppercase mb-3">Product Code</h6>
+                        <h6 class="text-uppercase mb-3">Rado</h6>
                         <p class="mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quas necessitatibus consequuntur vitae expedita inventore.
                         </p>
                         <h5 class="mb-4 d-flex">
-                            <span class="sale-price me-2">$2100</span>
-                            <span class="regular-price text-muted text-decoration-line-through">$2200</span>
+                            <span class="sale-price me-2">$2700</span>
+                            <span class="regular-price text-muted text-decoration-line-through">$3000</span>
                         </h5>
-                        <a href="#" class="btn btn-lg btn-primary text-uppercase">Buy Now</a>
+                        <a href="#" class="button button-accent text-uppercase">Buy Now</a>
                     </div>
                 </div>
-            </div><!--/.row-->
-        </div><!--/.container-fluid-->
+            </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
     </section>
     <!-- END PRODUCT (FEATURE) SECTION << -->
 
@@ -446,7 +625,7 @@
     <section class="section py-5" id="home-testimonial">
         <div class="container">
             <div class="section-title mb-5">
-                <h2 class="section-title-heading">Our Client Say</h2>
+                <h2 class="headline-2">Our Client Says</h2>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-2 d-flex align-items-center fst-italic">
@@ -467,12 +646,12 @@
                     <div class="position-relative">
                         <div class="img-frame-half-x position-absolute end-0 rounded"></div>
                         <div class="p-4 ps-0">
-                            <img src="img/client.jpg" alt="Featured Product" class="img-fluid rounded">
+                            <img src="img/client.jpg" alt="Client Image" class="img-fluid rounded">
                         </div>
                     </div>
                 </div>
-            </div><!--/.row-->
-        </div><!--/.container-fluid-->
+            </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
     </section>
     <!-- END TESTIMONIAL SECTION << -->
 
@@ -480,36 +659,36 @@
     <section class="section py-5" id="home-news">
         <div class="container">
             <div class="section-title mb-5">
-                <h2 class="section-title-heading">Latest News</h2>
+                <h2 class="headline-2">Latest News</h2>
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-lg-6">
                     <div class="position-relative">
-                        <div class="img-frame-half-y position-absolute start-0 rounded"></div>
+                        <div class="img-frame-half-y position-absolute bottom-0 rounded"></div>
                         <div class="p-4">
-                            <a href="#" class="text-decoration-none">
-                                <img src="img/blog.jpg" alt="Featured Product" class="img-fluid rounded">
+                            <a href="#">
+                                <img src="img/blog-5.jpg" alt="News Photo" class="img-fluid rounded img-hover-left transition-md transition-ease">
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 d-flex align-items-center">
+                <div class="col-lg-6 d-flex align-items-center">
                     <div class="d-block p-4">
                         <h3 class="mb-4 text-capitalize">
-                            <a href="#" class="hover-underline text-decoration-none">
-                                Exclusive Offer For All
+                            <a href="#" class="link-accent">
+                                Upcomming Watch is Near<spa class="text-accent">!</spa>
                             </a>
                         </h3>
                         <p class="mb-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quas necessitatibus consequuntur vitae expedita inventore.
                         </p>
-                        <a href="#" class="btn btn-md btn-dark text-uppercase">Learn More</a>
+                        <a href="#" class="button button-alter text-uppercase">Read More</a>
                     </div>
                 </div>
-           </div><!--/.row-->
-        </div><!--/.container-fluid-->
+           </div> <!-- end row -->
+        </div> <!-- end container-fluid -->
     </section>
     <!-- END NEWS SECTION << -->
 
@@ -518,118 +697,126 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
+                    <!-- Subscribe Section -->
                     <div class="bg-white rounded p-4 text-center subscribe-section">
-                        <h5 class="text-uppercase">Join our Newsletter</h5>
-                        <p>Recive our latest products by Email</p>
+                        <h4 class="headline-4 text-accent mb-0">Join to our Newsletter</h4>
+                        <p>Receive our latest products by Email</p>
                         <form class="d-flex flex-column flex-md-row justify-content-center subscribe-form">
                             <label for="subscribe-email" class="sr-only">Your Email Address</label>
-                            <input type="email" placeholder="Your email address" id="subscribe-email" class="rounded me-md-2 mb-2 mb-md-0">
-                            <button type="submit" class="btn btn-md btn-primary text-uppercase">Subscribe</button>
+                            <input type="email" placeholder="Your email address" id="subscribe-email" class="rounded me-md-2 mb-2 mb-md-0" autofocus>
+                            <button type="submit" class="button button-accent text-uppercase">Subscribe</button>
                         </form>
                     </div>
                 </div>
-            </div><!--/.row-->
-
+            </div><!-- end row -->
             <div class="row mt-5">
                 <div class="col-sm-6 col-lg-4">
                     <div class="footer-widget">
                         <!-- LOGO in Footer -->
-                        <a href="index.html" class="navbar-brand p-0 d-block mb-3">
-                            <img class="logo img-fluid rounded" src="img/iconica-logo.png" alt="Iconica Logo">
+                        <a href="index.html" class="logo p-0 mb-3">
+                            Shopi
                         </a>
                         <p class="text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ut, cum molestiae quae praesentium magnam odit dicta qui sint aspernatur!</p>
                     </div>
                 </div>
-
                 <div class="col-sm-6 col-lg-2">
                     <div class="footer-widget">
-                        <h5 class="mb-3 text-white text-uppercase">Links</h5>
+                        <h5 class="mb-3 text-uppercase heading-5">Links</h5>
                         <ul class="list-unstyled d-flex flex-row flex-md-column footer-nav">
-                            <li class="me-3 me-md-0 mb-md-2">
+                            <li class="me-3 me-md-0 mb-md-3">
                                 <a href="#" class="nav-link">Shop</a>
                             </li>
-                            <li class="me-3 me-md-0 mb-md-2">
+                            <li class="me-3 me-md-0 mb-md-3">
                                 <a href="#" class="nav-link">News</a>
                             </li>
-                            <li class="me-3 me-md-0 mb-md-2">
+                            <li class="me-3 me-md-0 mb-md-3">
                                 <a href="#" class="nav-link">About</a>
                             </li>
-                            <li class="me-3 me-md-0 mb-md-2">
+                            <li class="me-3 me-md-0 mb-md-3">
                                 <a href="#" class="nav-link">Policy</a>
                             </li>
-                            <li class="me-3 me-md-0 mb-md-2">
+                            <li class="me-3 me-md-0 mb-md-3">
                                 <a href="#" class="nav-link">Help</a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-
+                    </div><!-- end footer-widget -->
+                </div><!-- end column -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="footer-widget">
-                        <h5 class="text-uppercase text-white mb-3">Contact</h5>
-                        <address class="d-flex flex-column">
-                            <strong class="mb-1">Hotline:</strong>
-                            <a href="tel:+8801566022533" class="mb-3 text-decoration-none text-light">
-                                <i class="fa-solid fa-phone me-2"></i>
-                                +8801566022533
-                            </a>
-                            <strong class="mb-1">Email:</strong>
-                            <a href="mailto:raselnobogram@gmail.com" class="text-break mb-3 text-decoration-none text-light">
-                                <i class="fa-solid fa-at me-2"></i>
-                                raselnobogram@gmail.com
-                            </a>
+                        <h5 class="text-uppercase mb-3 heading-5">Contact</h5>
+                        <address>
+                            <div class="d-flex flex-column mb-3">
+                                <h6 class="headline-6 mb-1">
+                                    <i class="fa-solid fa-phone me-1"></i>
+                                    Call Us
+                                </h6>
+                                <a href="tel:+8801566022533" class="text-accent">
+                                    +8801566022533
+                                </a>
+                            </div>
+                            <div class="d-flex flex-column mb-3">
+                                <h6 class="headline-6 mb-1">
+                                    <i class="fa-solid fa-at me-1"></i>
+                                    Email Us
+                                </h6>
+                                <a href="mailto:raselnobogram@gmail.com" class="text-accent text-break">
+                                    raselnobogram@gmail.com
+                                </a>
+                            </div>
                         </address>
-                        <strong>Conect With Us:</strong>
+                        <h4 class="headline-6 mb-2">Conect With Us</h4>
                         <ul class="list-unstyled d-flex pt-2">
                             <li class="me-3">
-                                <a href="#" class="icon-box-sm rounded bg-light text-dark text-decoration-none" title="Facebook">
+                                <a href="#" class="icon-box-sm social-link" title="Facebook">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
 
                             <li class="me-3">
-                                <a href="#" class="icon-box-sm rounded bg-light text-dark text-decoration-none" title="Instagram">
+                                <a href="#" class="icon-box-sm social-link" title="Instagram">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
 
                             <li class="me-3">
-                                <a href="#" class="icon-box-sm rounded bg-light text-dark text-decoration-none" title="Youtube">
+                                <a href="#" class="icon-box-sm social-link" title="Youtube">
                                     <i class="fa-brands fa-youtube"></i>
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-
+                    </div><!-- end footer-widget -->
+                </div><!-- end column -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="footer-widget">
-                        <h5 class="text-uppercase text-white mb-3">we accept</h5>
+                        <h5 class="text-uppercase mb-3 heading-5">we accept</h5>
                         <div class="d-flex flex-wrap payment-support">
-                            <img src="img/bkash-logo.png" alt="Bkash Logo">
-                            <img src="img/nagad-logo.png" alt="Nagad Logo">
-                            <img src="img/rocket-logo.png" alt="Rocket Logo">
-                            <img src="img/upay-logo.png" alt="Upay Logo">
+                            <img src="img/paypal.svg" alt="PayPal Logo">
+                            <img src="img/mastercard.png" alt="Mastercard Logo">
+                            <img src="img/visa-logo.jpg" alt="Visa Logo">
                         </div>
-                    </div>
-                </div>
-            </div><!--/.row-->
+                    </div><!-- end footer-widget -->
+                </div><!-- end column -->
+            </div> <!-- end row -->
 
             <div class="row">
                 <div class="col copyright py-2 d-flex flex-column flex-md-row justify-content-between">
                     <small class="mb-2 mb-md-0">&copy;Copyright 2022. All right Reserved.</small>
                     <small class="mb-0">Developed by <a href="#">Hoaasin M. Rasel</a></small>
                 </div>
-            </div>
-        </div>
+            </div> <!-- end row -->
+        </div><!-- end container-->
     </footer>
     <!-- END FOOTER SECTION << -->    
     
 
-<!-- Linking Bootstrap JavaScript -->
+<!-- Bootstrap JavaScript CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js"></script>
 
-<!-- Linking Custom JavaScript -->
-<script src="js/app.js" defer></script>
+<!-- Swiper JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="js/app.js"></script>
+
 </body>
 </html>
